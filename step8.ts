@@ -8,7 +8,7 @@ config()
 async function main() {
   //open wallet v4
 
-  const mnemonic = process.env.mnemonic1 || "";
+  const mnemonic = process.env.mnemonic || "";
   const key = await mnemonicToWalletKey(mnemonic.split(" "));
   const wallet = WalletContractV4.create({publicKey: key.publicKey, workchain: 0});
   
